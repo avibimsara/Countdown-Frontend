@@ -8,10 +8,10 @@ import retrofit2.http.Body;
 public interface ApiService {
 
     // Endpoint to get the countdown parameter from the server
-    @GET("countdown")
+    @GET("api/countdown")
     Call<CountdownResponse> getCountdownParameter();
 
     // Endpoint to update the countdown parameter on the server
-    @POST("countdown")
+    @POST("api/countdown")
     Call<Void> updateCountdownParameter(@Body CountdownRequest countdownRequest);
 }

@@ -31,29 +31,29 @@ public class Countdown extends AppCompatActivity {
     }
 
     private void fetchCountdownParameterFromServer() {
-        // Make an API call to your server to fetch the countdown parameter
-        // Example using Retrofit:
+        // Making an API call to server to fetch the countdown parameter
+        // Using Retrofit:
         ApiService apiService = RetrofitClientInstance.getRetrofitInstance().create(ApiService.class);
         Call<CountdownResponse> call = apiService.getCountdownParameter();
         call.enqueue(new Callback<CountdownResponse>() {
             @Override
             public void onResponse(Call<CountdownResponse> call, Response<CountdownResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    // Retrieve the countdown parameter from the server response
+                    // Retrieving the countdown parameter from the server response
                     long countdownInSeconds = response.body().getCountdownInSeconds();
                     countdownTimeInMillis = countdownInSeconds * 1000;
 
-                    // Start the countdown timer
+                    // Starting the countdown timer
                     startCountdownTimer();
                 } else {
-                    // Handle the error case if the API call returns an unsuccessful response
+                    // Handling the error case if the API call returns an unsuccessful response
                     Toast.makeText(Countdown.this, "Failed to fetch countdown parameter", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<CountdownResponse> call, Throwable t) {
-                // Handle the error case if the API call fails
+                // Handling the error case if the API call fails
                 Toast.makeText(Countdown.this, "Failed to fetch countdown parameter", Toast.LENGTH_SHORT).show();
             }
         });
