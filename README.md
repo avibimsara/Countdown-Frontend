@@ -16,8 +16,4 @@ Following is a brief description of the functionality of the app.
 
 5. Push Notification: When the countdown reaches zero, a push notification is sent to the user's device, showing the message "Time over" in the notification bar.
 
-6. Responsive Design: The app is designed to be responsive, ensuring a consistent user experience across various mobile devices.
-
-7. Additional Features: The app may include other functionalities, such as the ability to customize the timer appearance, set multiple countdowns, or handle timezone differences.
-
 Overall, the app provides users with a straightforward and user-friendly countdown timer experience with the added convenience of dynamic countdown duration and timely push notifications.
