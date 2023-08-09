@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="129dp"
         android:layout_marginBottom="176dp"
-        android:backgroundTint="#FF5722"
+        android:backgroundTint="#FDFDFD"
         android:text="Countown Timer"
         android:textAlignment="center"
         android:textColorHighlight="@color/cardview_dark_background"
